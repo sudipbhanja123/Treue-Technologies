@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Calculator</title>
+  <meta name="description" content="Simple Calculator With Dark Mode." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white">
+  <div class="flex flex-col items-center justify-center min-h-screen">
+    <div class="p-8 rounded-lg bg-gray-800">
+      <div class="flex justify-between items-center mb-4">
+        
+        <h1 id="toast" class="text-2xl">Calculator</h1>
+      </div>
+      <div class="mb-2 space-x-2">
+        <input type="text" name="result" id="result" placeholder="Result" readonly class="bg-gray-300 px-4 py-2 w-2/3 text-black">
+        <input type="button" value="C" onclick="result.value=''" id="clear-button" class="bg-red-500 text-white px-4 py-2 rounded-full">
+      </div>
+      <div class="mb-2 space-x-2">
+        <input type="button" value="1" onclick="liveScreen(1)" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="2" onclick="liveScreen(2)" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="3" onclick="liveScreen(3)" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="+" onclick="liveScreen('+')" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+      </div>
+      <div class="mb-2 space-x-2">
+        <input type="button" value="4" onclick="liveScreen(4)" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="5" onclick="liveScreen(5)" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="6" onclick="liveScreen(6)" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="-" onclick="liveScreen('-')" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+      </div>
+      <div class="mb-2 space-x-2">
+        <input type="button" value="7" onclick="liveScreen(7)" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="8" onclick="liveScreen(8)" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="9" onclick="liveScreen(9)" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="x" onclick="liveScreen('*')" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+      </div>
+      <div class="mb-2 space-x-2">
+        <input type="button" value="/" onclick="liveScreen('/')" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="0" onclick="liveScreen(0)" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="." onclick="liveScreen('.')" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+        <input type="button" value="=" onclick="calculate(result.value)" class="bg-gray-700 text-white px-4 py-2 rounded-full">
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
